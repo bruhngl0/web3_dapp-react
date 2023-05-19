@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from "react"
 import Web3 from 'web3';
 
+import '../styles/Ui.scss' 
 
 const Ui = () => {
 
@@ -73,7 +74,7 @@ const Ui = () => {
 
   
   return (
-    <>
+    <div>
    <h1>Connect Metamask Wallet</h1>
    <button onClick = {connectToWallet}>tap to connect</button>
 
@@ -84,7 +85,7 @@ const Ui = () => {
         <input type='text' name= "reciever_address" placeholder='recievers address' onChange={(e) => setAddress(e.target.value)}/>
    </form>
    <button onClick={processPayment}>send payment</button>
-  </>
+  </div>
   )
 }
 
